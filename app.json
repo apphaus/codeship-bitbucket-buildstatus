@@ -1,0 +1,24 @@
+{
+    "name": "codeship-bitbucket-buildstatus",
+    "description": "Update Bitbucket commits with their Codeship build status automatically.",
+    "repository": "https://github.com/apphaus/codeship-bitbucket-buildstatus",
+    "keywords": ["bitbucket", "codeship", "build status"],
+    "env": {
+        "BITBUCKET_USERNAME": {
+            "description": "Your Bitbucket team name or username.",
+            "value": ""
+        },
+        "BITBUCKET_API_KEY": {
+            "description": "Your Bitbucket team API key (recommended) or password.",
+            "value": ""
+        },
+        "HTTP_BASIC_USER": {
+            "description": "Username for webhook URL HTTP BASIC Auth.",
+            "value": ""
+        },
+        "HTTP_BASIC_PASS": {
+            "description": "Password for webhook URL HTTP BASIC Auth.",
+            "value": ""
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "codeship-bitbucket-buildstatus",
+    "version": "1.0.0",
+    "description": "Update Bitbucket commits with their Codeship build status automatically.",
+    "main": "app.js",
+    "engines": {
+        "node": "0.10.33"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/apphaus/codeship-bitbucket-buildstatus.git"
+    },
+    "keywords": [
+        "bitbucket",
+        "codeship",
+        "build status"
+    ],
+    "author": "App Haus",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/apphaus/codeship-bitbucket-buildstatus/issues"
+    },
+    "homepage": "https://github.com/apphaus/codeship-bitbucket-buildstatus",
+    "dependencies": {
+        "basic-auth-connect": "1.0.0",
+        "body-parser": "^1.9.2",
+        "express": "^4.10.1",
+        "request": "^2.47.0"
+    }
+}
