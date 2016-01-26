@@ -45,8 +45,8 @@ module.exports = function () {
                 console.error('Bitbucket returned an error: ', body.error);
             }
 
-            if (response.statusCode !== 200) {
-                console.error('Bitbucket returned a non-200 statuscode of', response.statusCode);
+            if (response.statusCode !== 200 && response.statusCode !== 201) {
+                console.error('Bitbucket returned a non-200/201 statuscode of', response.statusCode);
             }
 
             postStatusCallback(response.statusCode);
@@ -70,7 +70,7 @@ module.exports = function () {
         }
 
         postBitbucketCommitStatus(req.body.build, function (status_code) {
-            status_code = (status_code === 200) ? 200 : 500;
+            status_code = (status_code === 200 || status_code === 201) ? 200 : 500;
             res.status(status_code).end();
         });
     });
