@@ -18,6 +18,9 @@ module.exports = function () {
             bitbucket_url = 'https://' + BITBUCKET_USERNAME + ':' + BITBUCKET_API_KEY + '@api.bitbucket.org/2.0/repositories/' + build.project_name + '/commit/' + build.commit_id + '/statuses/build';
 
         switch (build.status) {
+        case 'waiting':
+            console.info('Codeship has indicated that the build is waiting to take place. Bitbucket will not be updated until the build is in progress.');
+            return postStatusCallback(null);
         case 'success':
             bitbucket_state = 'SUCCESSFUL';
             break;
