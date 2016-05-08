@@ -15,7 +15,7 @@ module.exports = function () {
 
     function postBitbucketCommitStatus(build, postStatusCallback) {
         var bitbucket_state = 'FAILED',
-            bitbucket_url = 'https://' + BITBUCKET_USERNAME + ':' + BITBUCKET_API_KEY + '@api.bitbucket.org/2.0/repositories/' + build.project_name + '/commit/' + build.commit_id + '/statuses/build';
+            bitbucket_url = 'https://' + BITBUCKET_USERNAME + ':' + BITBUCKET_API_KEY + '@api.bitbucket.org/2.0/repositories/' + build.project_name.toLowerCase() + '/commit/' + build.commit_id + '/statuses/build';
 
         switch (build.status) {
         case 'waiting':
