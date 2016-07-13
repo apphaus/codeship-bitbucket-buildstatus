@@ -1,3 +1,7 @@
+# codeship-bitbucket-buildstatus is no longer maintained
+
+Please note that [Codeship now offer this integration](https://community.codeship.com/t/now-available-bitbucket-build-status-api/1135) themselves, which is enabled by default.
+
 # codeship-bitbucket-buildstatus
 
 Update Bitbucket commits with their Codeship build status automatically.
